@@ -1,0 +1,1085 @@
+[
+  {
+    "id": "EVAL_000",
+    "sample_index": 98,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.2926,
+    "detection_confidence": 0.8582,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in several key features.",
+      "key_differences": [
+        "The very low frequency power is 2.38 times lower than the normal reference, suggesting altered regulatory mechanisms.",
+        "The heart rate is 2.11 BPM lower than the normal reference, which is outside the typical resting range of 60-100 BPM.",
+        "The maximum R-R interval is 1.94 samples higher than the normal reference, indicating potential pauses or blocks in the heart rhythm."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in heart function and rhythm that warrant further evaluation.",
+      "confidence_statement": "The anomaly score of 0.293 and a distance of 5.882 from normal references suggest a notable level of difference, but this does not confirm a specific condition."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 5.8815,
+      "sparsity": 13
+    },
+    "top_feature_changes": [
+      {
+        "feature": "vlf_power",
+        "original_value": 1.8927,
+        "counterfactual_value": -0.4896,
+        "difference": -2.3822
+      },
+      {
+        "feature": "hr_estimate",
+        "original_value": 1.9007,
+        "counterfactual_value": -0.2122,
+        "difference": -2.1129
+      },
+      {
+        "feature": "rr_max",
+        "original_value": -2.2459,
+        "counterfactual_value": -0.3042,
+        "difference": 1.9417
+      },
+      {
+        "feature": "min",
+        "original_value": 0.8469,
+        "counterfactual_value": -0.9253,
+        "difference": -1.7722
+      },
+      {
+        "feature": "n_peaks",
+        "original_value": -1.5671,
+        "counterfactual_value": 0.0825,
+        "difference": 1.6496
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 4.274
+  },
+  {
+    "id": "EVAL_001",
+    "sample_index": 39,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.0756,
+    "detection_confidence": 0.5293,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows notable differences in variability and baseline levels compared to normal patterns.",
+      "key_differences": [
+        "The signal variance is 1.42 units higher than the normal reference, indicating increased variability.",
+        "The signal standard deviation is also 1.42 units higher, suggesting overall greater fluctuations in the signal.",
+        "The very low frequency power is 0.90 ratio lower than normal, which may reflect changes in long-term regulatory mechanisms."
+      ],
+      "interpretation_note": "These patterns may be associated with alterations in heart rhythm or electrical activity.",
+      "confidence_statement": "The anomaly score of 0.076 and a distance of 2.981 from normal suggest a moderate level of deviation from typical ECG patterns."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 2.9814,
+      "sparsity": 3
+    },
+    "top_feature_changes": [
+      {
+        "feature": "var",
+        "original_value": -2.1461,
+        "counterfactual_value": -0.7234,
+        "difference": 1.4226
+      },
+      {
+        "feature": "std",
+        "original_value": -2.1461,
+        "counterfactual_value": -0.7234,
+        "difference": 1.4226
+      },
+      {
+        "feature": "rms",
+        "original_value": -2.1461,
+        "counterfactual_value": -0.7234,
+        "difference": 1.4226
+      },
+      {
+        "feature": "vlf_power",
+        "original_value": 0.6388,
+        "counterfactual_value": -0.2567,
+        "difference": -0.8956
+      },
+      {
+        "feature": "mean",
+        "original_value": 0.0693,
+        "counterfactual_value": 0.8358,
+        "difference": 0.7665
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 2.868
+  },
+  {
+    "id": "EVAL_002",
+    "sample_index": 65,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.137,
+    "detection_confidence": 0.6224,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows several differences from normal patterns that may suggest irregularities in heart rhythm and waveform characteristics.",
+      "key_differences": [
+        "The maximum R-R interval is 1.48 samples lower than the normal reference, which may suggest potential pauses or blocks.",
+        "The signal minimum is 1.45 units lower than the normal reference, indicating a lower lowest point in the ECG.",
+        "The R-R variability is 1.33 samples lower than the normal reference, which may suggest a less stable rhythm."
+      ],
+      "interpretation_note": "These patterns may be associated with irregular heart rhythms and changes in the electrical activity of the heart.",
+      "confidence_statement": "The AI's flag is based on a moderate difference from normal patterns, indicating some uncertainty in the assessment."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 3.7464,
+      "sparsity": 5
+    },
+    "top_feature_changes": [
+      {
+        "feature": "rr_max",
+        "original_value": 1.73,
+        "counterfactual_value": 0.2506,
+        "difference": -1.4794
+      },
+      {
+        "feature": "min",
+        "original_value": 1.7828,
+        "counterfactual_value": 0.3318,
+        "difference": -1.451
+      },
+      {
+        "feature": "rr_std",
+        "original_value": 1.7932,
+        "counterfactual_value": 0.4678,
+        "difference": -1.3254
+      },
+      {
+        "feature": "rr_mean",
+        "original_value": 0.8026,
+        "counterfactual_value": -0.231,
+        "difference": -1.0336
+      },
+      {
+        "feature": "skewness",
+        "original_value": 1.5833,
+        "counterfactual_value": 0.5717,
+        "difference": -1.0116
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.813
+  },
+  {
+    "id": "EVAL_003",
+    "sample_index": 85,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.0954,
+    "detection_confidence": 0.5593,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows notable differences in several key features compared to normal reference patterns.",
+      "key_differences": [
+        "The R-wave amplitude variability is 1.65 normalized units lower than the normal reference, indicating less consistency in ventricular depolarization.",
+        "The signal standard deviation is 1.28 units higher than the normal reference, suggesting increased overall variability in the signal.",
+        "The root mean square, signal variance, and total spectral power are all higher than normal, indicating increased signal energy and variability."
+      ],
+      "interpretation_note": "These patterns may be associated with changes in cardiac electrical activity or signal quality.",
+      "confidence_statement": "The AI's flag is based on a moderate difference from normal patterns, but the exact clinical significance remains uncertain."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 3.6731,
+      "sparsity": 6
+    },
+    "top_feature_changes": [
+      {
+        "feature": "peak_height_std",
+        "original_value": -0.2943,
+        "counterfactual_value": -1.9414,
+        "difference": -1.6471
+      },
+      {
+        "feature": "std",
+        "original_value": -1.4833,
+        "counterfactual_value": -0.2055,
+        "difference": 1.2778
+      },
+      {
+        "feature": "rms",
+        "original_value": -1.4833,
+        "counterfactual_value": -0.2055,
+        "difference": 1.2778
+      },
+      {
+        "feature": "var",
+        "original_value": -1.4833,
+        "counterfactual_value": -0.2055,
+        "difference": 1.2778
+      },
+      {
+        "feature": "total_power",
+        "original_value": -0.6903,
+        "counterfactual_value": 0.531,
+        "difference": 1.2214
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 5.695
+  },
+  {
+    "id": "EVAL_004",
+    "sample_index": 52,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.0248,
+    "detection_confidence": 0.4523,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows several differences from normal patterns that could suggest irregularities in heart function.",
+      "key_differences": [
+        "The number of detected heartbeats is 1.65 counts lower than what is expected for the recording duration.",
+        "The R-R interval is 1.08 samples higher, indicating potential irregularity in rhythm stability.",
+        "The heart rate is 0.98 BPM lower than the normal reference range of 60-100 BPM."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in heart rhythm and autonomic nervous system function.",
+      "confidence_statement": "The anomaly score of 0.025 and a distance of 2.817 from the nearest normal reference suggest moderate differences, indicating some uncertainty."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 2.8168,
+      "sparsity": 2
+    },
+    "top_feature_changes": [
+      {
+        "feature": "n_peaks",
+        "original_value": 1.7321,
+        "counterfactual_value": 0.0825,
+        "difference": -1.6496
+      },
+      {
+        "feature": "rr_mean",
+        "original_value": -0.6761,
+        "counterfactual_value": 0.4006,
+        "difference": 1.0767
+      },
+      {
+        "feature": "hr_estimate",
+        "original_value": 0.4622,
+        "counterfactual_value": -0.5209,
+        "difference": -0.9831
+      },
+      {
+        "feature": "hrv",
+        "original_value": 1.9282,
+        "counterfactual_value": 1.1842,
+        "difference": -0.744
+      },
+      {
+        "feature": "total_power",
+        "original_value": 0.3538,
+        "counterfactual_value": -0.3302,
+        "difference": -0.684
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.307
+  },
+  {
+    "id": "EVAL_005",
+    "sample_index": 86,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.0833,
+    "detection_confidence": 0.5411,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows several notable differences in signal characteristics compared to normal patterns.",
+      "key_differences": [
+        "Total spectral power is 1.84 units higher, indicating increased overall signal energy.",
+        "Signal variance is 1.29 units higher, suggesting greater variability in the signal.",
+        "Signal standard deviation is also 1.29 units higher, reflecting increased overall variability in the signal."
+      ],
+      "interpretation_note": "These patterns may be associated with changes in cardiac electrical activity or signal quality.",
+      "confidence_statement": "The AI's flag is based on a moderate difference from normal references, indicating some uncertainty in the assessment."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 3.7034,
+      "sparsity": 5
+    },
+    "top_feature_changes": [
+      {
+        "feature": "total_power",
+        "original_value": -0.609,
+        "counterfactual_value": 1.2298,
+        "difference": 1.8388
+      },
+      {
+        "feature": "var",
+        "original_value": -0.8335,
+        "counterfactual_value": 0.4588,
+        "difference": 1.2923
+      },
+      {
+        "feature": "std",
+        "original_value": -0.8335,
+        "counterfactual_value": 0.4588,
+        "difference": 1.2923
+      },
+      {
+        "feature": "rms",
+        "original_value": -0.8335,
+        "counterfactual_value": 0.4588,
+        "difference": 1.2923
+      },
+      {
+        "feature": "median",
+        "original_value": -0.2928,
+        "counterfactual_value": 0.7959,
+        "difference": 1.0888
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.483
+  },
+  {
+    "id": "EVAL_006",
+    "sample_index": 58,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.0945,
+    "detection_confidence": 0.558,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows notable differences in key signal characteristics compared to normal patterns.",
+      "key_differences": [
+        "The signal median is 1.47 units higher than the normal reference, indicating a shift in the central value of the signal.",
+        "The signal mean is 1.41 units lower than the normal reference, suggesting a change in the baseline level of the ECG.",
+        "Heart rate variability is 1.17 ratio lower than the normal reference, reflecting potential alterations in autonomic nervous system function."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in heart function and electrical activity.",
+      "confidence_statement": "The anomaly score of 0.094 and a distance of 3.793 from normal patterns suggest moderate confidence in this flag."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 3.7935,
+      "sparsity": 5
+    },
+    "top_feature_changes": [
+      {
+        "feature": "median",
+        "original_value": 0.6401,
+        "counterfactual_value": 2.1139,
+        "difference": 1.4737
+      },
+      {
+        "feature": "mean",
+        "original_value": 0.9971,
+        "counterfactual_value": -0.4148,
+        "difference": -1.4119
+      },
+      {
+        "feature": "hrv",
+        "original_value": -1.013,
+        "counterfactual_value": -2.179,
+        "difference": -1.166
+      },
+      {
+        "feature": "skewness",
+        "original_value": 0.28,
+        "counterfactual_value": -0.8559,
+        "difference": -1.1358
+      },
+      {
+        "feature": "peak_height_std",
+        "original_value": 1.4474,
+        "counterfactual_value": 0.3573,
+        "difference": -1.0901
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.602
+  },
+  {
+    "id": "EVAL_007",
+    "sample_index": 38,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.362,
+    "detection_confidence": 0.9635,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant differences in waveform characteristics and rhythm stability compared to normal patterns.",
+      "key_differences": [
+        "The waveform peakedness is lower than normal, which relates to the shape of the QRS complex.",
+        "The signal minimum is higher than normal, indicating an unusual lowest point in the ECG.",
+        "The R-R interval is shorter than normal, suggesting irregularity in the heart rhythm."
+      ],
+      "interpretation_note": "These patterns may be associated with changes in heart function or rhythm stability.",
+      "confidence_statement": "The AI's confidence in this flag is based on the substantial differences observed compared to normal ECG references."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 8.283,
+      "sparsity": 14
+    },
+    "top_feature_changes": [
+      {
+        "feature": "kurtosis",
+        "original_value": 3.4209,
+        "counterfactual_value": -0.3737,
+        "difference": -3.7946
+      },
+      {
+        "feature": "min",
+        "original_value": -4.3105,
+        "counterfactual_value": -0.9253,
+        "difference": 3.3852
+      },
+      {
+        "feature": "skewness",
+        "original_value": -3.9904,
+        "counterfactual_value": -1.0988,
+        "difference": 2.8916
+      },
+      {
+        "feature": "rr_mean",
+        "original_value": 2.7263,
+        "counterfactual_value": -0.0013,
+        "difference": -2.7276
+      },
+      {
+        "feature": "rr_max",
+        "original_value": 1.8225,
+        "counterfactual_value": -0.3042,
+        "difference": -2.1267
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.603
+  },
+  {
+    "id": "EVAL_008",
+    "sample_index": 26,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.1081,
+    "detection_confidence": 0.5786,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows notable differences in heart rate and signal variability compared to normal patterns.",
+      "key_differences": [
+        "The number of detected heartbeats is 1.65 counts lower than the normal reference, which should match the expected for the recording duration.",
+        "The R-R interval is 1.08 samples higher than the normal reference, indicating potential irregularity in rhythm stability.",
+        "The signal variance and standard deviation are both 0.89 units higher than the normal reference, suggesting increased variability in the signal."
+      ],
+      "interpretation_note": "These patterns may be associated with irregular heart rhythms or increased variability in cardiac function.",
+      "confidence_statement": "The AI's flag is based on moderate differences from normal references, indicating some uncertainty in the assessment."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 3.1775,
+      "sparsity": 2
+    },
+    "top_feature_changes": [
+      {
+        "feature": "n_peaks",
+        "original_value": 1.7321,
+        "counterfactual_value": 0.0825,
+        "difference": -1.6496
+      },
+      {
+        "feature": "rr_mean",
+        "original_value": -0.3315,
+        "counterfactual_value": 0.7452,
+        "difference": 1.0767
+      },
+      {
+        "feature": "rr_min",
+        "original_value": -0.5585,
+        "counterfactual_value": 0.4344,
+        "difference": 0.993
+      },
+      {
+        "feature": "var",
+        "original_value": -1.4958,
+        "counterfactual_value": -0.6026,
+        "difference": 0.8932
+      },
+      {
+        "feature": "std",
+        "original_value": -1.4958,
+        "counterfactual_value": -0.6026,
+        "difference": 0.8932
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.918
+  },
+  {
+    "id": "EVAL_009",
+    "sample_index": 53,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.0294,
+    "detection_confidence": 0.4593,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows several significant differences compared to normal reference patterns.",
+      "key_differences": [
+        "The signal median is 1.64 units higher than the normal reference, indicating a shift in the central value of the signal.",
+        "The signal variance, standard deviation, and root mean square are all 0.83 units higher, suggesting increased variability and energy in the signal.",
+        "The waveform asymmetry is 0.80 units lower than normal, which may indicate potential changes in the ST segment."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in cardiac function or electrical activity.",
+      "confidence_statement": "The AI's flag is based on a moderate difference from normal patterns, but it does not guarantee a clinical abnormality."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 2.975,
+      "sparsity": 1
+    },
+    "top_feature_changes": [
+      {
+        "feature": "median",
+        "original_value": -0.5034,
+        "counterfactual_value": 1.1385,
+        "difference": 1.6419
+      },
+      {
+        "feature": "var",
+        "original_value": -1.5621,
+        "counterfactual_value": -0.734,
+        "difference": 0.8281
+      },
+      {
+        "feature": "std",
+        "original_value": -1.5621,
+        "counterfactual_value": -0.734,
+        "difference": 0.8281
+      },
+      {
+        "feature": "rms",
+        "original_value": -1.5621,
+        "counterfactual_value": -0.734,
+        "difference": 0.8281
+      },
+      {
+        "feature": "skewness",
+        "original_value": 0.4348,
+        "counterfactual_value": -0.363,
+        "difference": -0.7978
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 4.384
+  },
+  {
+    "id": "EVAL_010",
+    "sample_index": 28,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.2366,
+    "detection_confidence": 0.7734,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant differences in signal characteristics compared to normal patterns.",
+      "key_differences": [
+        "The signal variance is 1.90 units lower than the normal reference, indicating reduced variability.",
+        "The signal standard deviation is also 1.90 units lower, suggesting less overall variability in the ECG signal.",
+        "The number of detected heartbeats is 1.65 counts higher than expected for the recording duration."
+      ],
+      "interpretation_note": "These patterns may be associated with altered cardiac function or recording conditions.",
+      "confidence_statement": "The anomaly score and distance from normal patterns suggest a notable deviation, but further clinical evaluation is necessary."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 4.799,
+      "sparsity": 7
+    },
+    "top_feature_changes": [
+      {
+        "feature": "var",
+        "original_value": 2.8502,
+        "counterfactual_value": 0.9535,
+        "difference": -1.8967
+      },
+      {
+        "feature": "std",
+        "original_value": 2.8502,
+        "counterfactual_value": 0.9535,
+        "difference": -1.8967
+      },
+      {
+        "feature": "rms",
+        "original_value": 2.8502,
+        "counterfactual_value": 0.9535,
+        "difference": -1.8967
+      },
+      {
+        "feature": "min",
+        "original_value": 0.8402,
+        "counterfactual_value": -0.9253,
+        "difference": -1.7654
+      },
+      {
+        "feature": "n_peaks",
+        "original_value": -1.5671,
+        "counterfactual_value": 0.0825,
+        "difference": 1.6496
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.134
+  },
+  {
+    "id": "EVAL_011",
+    "sample_index": 97,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.151,
+    "detection_confidence": 0.6437,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant differences from normal patterns, suggesting potential abnormalities.",
+      "key_differences": [
+        "The signal minimum is 1.74 units lower than the normal reference, indicating a lower lowest point in the ECG.",
+        "The waveform asymmetry is 1.59 units lower than the normal reference, which may suggest ST segment changes.",
+        "The signal variance, standard deviation, and root mean square are all 1.50 units higher than the normal reference, indicating increased variability and energy in the signal."
+      ],
+      "interpretation_note": "These patterns may be associated with changes in cardiac function or electrical activity.",
+      "confidence_statement": "The anomaly score and distance from normal suggest a notable deviation from typical ECG patterns."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 4.4827,
+      "sparsity": 8
+    },
+    "top_feature_changes": [
+      {
+        "feature": "min",
+        "original_value": 1.1051,
+        "counterfactual_value": -0.6352,
+        "difference": -1.7403
+      },
+      {
+        "feature": "skewness",
+        "original_value": 1.231,
+        "counterfactual_value": -0.363,
+        "difference": -1.5941
+      },
+      {
+        "feature": "var",
+        "original_value": -2.2311,
+        "counterfactual_value": -0.734,
+        "difference": 1.4971
+      },
+      {
+        "feature": "std",
+        "original_value": -2.2311,
+        "counterfactual_value": -0.734,
+        "difference": 1.4971
+      },
+      {
+        "feature": "rms",
+        "original_value": -2.2311,
+        "counterfactual_value": -0.734,
+        "difference": 1.4971
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.511
+  },
+  {
+    "id": "EVAL_012",
+    "sample_index": 4,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.3203,
+    "detection_confidence": 0.9004,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in several key metrics.",
+      "key_differences": [
+        "The minimum R-R interval is 4.22 samples shorter than the normal reference, which may suggest the presence of ectopic beats.",
+        "The signal median is 2.21 units higher than the normal reference, indicating a shift in the central value of the signal.",
+        "The average R-wave amplitude is 1.96 normalized units lower than the normal reference, which could reflect potential conduction abnormalities."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in heart rhythm and conduction that warrant further investigation.",
+      "confidence_statement": "The AI's flag is based on a substantial difference of 6.982 from the nearest normal reference, suggesting a notable level of anomaly."
+    },
+    "counterfactual_metrics": {
+      "validity": false,
+      "proximity": 6.9817,
+      "sparsity": 12
+    },
+    "top_feature_changes": [
+      {
+        "feature": "rr_min",
+        "original_value": 3.4133,
+        "counterfactual_value": -0.8068,
+        "difference": -4.2201
+      },
+      {
+        "feature": "median",
+        "original_value": -2.5751,
+        "counterfactual_value": -0.3636,
+        "difference": 2.2115
+      },
+      {
+        "feature": "peak_height_mean",
+        "original_value": 4.2754,
+        "counterfactual_value": 2.3123,
+        "difference": -1.9631
+      },
+      {
+        "feature": "hrv",
+        "original_value": -0.798,
+        "counterfactual_value": 1.0766,
+        "difference": 1.8747
+      },
+      {
+        "feature": "kurtosis",
+        "original_value": 0.9633,
+        "counterfactual_value": 2.7204,
+        "difference": 1.7571
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 4.157
+  },
+  {
+    "id": "EVAL_013",
+    "sample_index": 13,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.1219,
+    "detection_confidence": 0.5996,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows several differences from normal patterns that could suggest an abnormality.",
+      "key_differences": [
+        "The number of detected heartbeats is 1.65 counts lower than the normal reference, which should match the expected for the recording duration.",
+        "The signal minimum is 1.36 units lower than the normal reference, indicating a lower lowest point in the ECG.",
+        "The very low frequency power is 0.99 ratio lower than the normal reference, reflecting changes in long-term regulatory mechanisms."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in heart rhythm and electrical activity.",
+      "confidence_statement": "The anomaly score and distance from the nearest normal reference suggest a moderate level of difference, indicating some uncertainty in the flag."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 3.2064,
+      "sparsity": 2
+    },
+    "top_feature_changes": [
+      {
+        "feature": "n_peaks",
+        "original_value": 1.7321,
+        "counterfactual_value": 0.0825,
+        "difference": -1.6496
+      },
+      {
+        "feature": "min",
+        "original_value": 1.6963,
+        "counterfactual_value": 0.3318,
+        "difference": -1.3645
+      },
+      {
+        "feature": "vlf_power",
+        "original_value": 0.4956,
+        "counterfactual_value": -0.4896,
+        "difference": -0.9851
+      },
+      {
+        "feature": "mean",
+        "original_value": -1.0199,
+        "counterfactual_value": -0.1324,
+        "difference": 0.8875
+      },
+      {
+        "feature": "zero_crossings",
+        "original_value": -1.5029,
+        "counterfactual_value": -0.6223,
+        "difference": 0.8806
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.886
+  },
+  {
+    "id": "EVAL_014",
+    "sample_index": 84,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.1902,
+    "detection_confidence": 0.7031,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant deviations in several key features compared to a normal reference ECG.",
+      "key_differences": [
+        "The R-wave amplitude variability is higher, indicating less consistency in ventricular depolarization.",
+        "The waveform peakedness is elevated, which may affect the QRS morphology.",
+        "The signal range is greater, reflecting a larger difference between the maximum and minimum signal values."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in cardiac conduction and depolarization processes.",
+      "confidence_statement": "The anomaly score and distance from the nearest normal reference suggest a notable difference, but this does not confirm a specific clinical condition."
+    },
+    "counterfactual_metrics": {
+      "validity": false,
+      "proximity": 4.9156,
+      "sparsity": 7
+    },
+    "top_feature_changes": [
+      {
+        "feature": "peak_height_std",
+        "original_value": 1.1286,
+        "counterfactual_value": 2.9886,
+        "difference": 1.8601
+      },
+      {
+        "feature": "kurtosis",
+        "original_value": 0.9529,
+        "counterfactual_value": 2.7204,
+        "difference": 1.7674
+      },
+      {
+        "feature": "range",
+        "original_value": 0.274,
+        "counterfactual_value": 1.9811,
+        "difference": 1.707
+      },
+      {
+        "feature": "peak_height_mean",
+        "original_value": 0.6644,
+        "counterfactual_value": 2.3123,
+        "difference": 1.6479
+      },
+      {
+        "feature": "spectral_entropy",
+        "original_value": -0.9338,
+        "counterfactual_value": 0.707,
+        "difference": 1.6409
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.504
+  },
+  {
+    "id": "EVAL_015",
+    "sample_index": 51,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.3394,
+    "detection_confidence": 0.9293,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in several key features.",
+      "key_differences": [
+        "The dominant frequency is 5.10 Hz lower than the normal reference, which may affect rhythm interpretation.",
+        "Waveform asymmetry is 3.60 units higher than the normal reference, potentially indicating ST segment changes.",
+        "The signal minimum is 2.62 units higher than the normal reference, which could reflect alterations in the baseline."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
+      "confidence_statement": "The anomaly score and distance from normal suggest a notable difference, but this does not confirm a specific clinical condition."
+    },
+    "counterfactual_metrics": {
+      "validity": false,
+      "proximity": 8.5987,
+      "sparsity": 10
+    },
+    "top_feature_changes": [
+      {
+        "feature": "dominant_freq",
+        "original_value": 10.0021,
+        "counterfactual_value": 4.899,
+        "difference": -5.1031
+      },
+      {
+        "feature": "skewness",
+        "original_value": -2.3358,
+        "counterfactual_value": 1.2652,
+        "difference": 3.601
+      },
+      {
+        "feature": "min",
+        "original_value": -3.2572,
+        "counterfactual_value": -0.6392,
+        "difference": 2.6181
+      },
+      {
+        "feature": "kurtosis",
+        "original_value": 2.8083,
+        "counterfactual_value": 0.2476,
+        "difference": -2.5607
+      },
+      {
+        "feature": "total_power",
+        "original_value": -0.5433,
+        "counterfactual_value": 1.7936,
+        "difference": 2.3369
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.283
+  },
+  {
+    "id": "EVAL_017",
+    "sample_index": 14,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.3783,
+    "detection_confidence": 0.9883,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant deviations in key metrics compared to normal patterns.",
+      "key_differences": [
+        "The minimum R-R interval is 13.41 samples shorter, which may suggest the presence of ectopic beats.",
+        "The overall R-R interval is 6.98 samples shorter, indicating potential instability in the rhythm.",
+        "The average R-wave amplitude is 3.08 normalized units lower, which could reflect conduction abnormalities."
+      ],
+      "interpretation_note": "These patterns may be associated with irregular heart rhythms and conduction issues.",
+      "confidence_statement": "The AI's flag is based on substantial differences from normal ECG patterns, but it does not guarantee a specific clinical outcome."
+    },
+    "counterfactual_metrics": {
+      "validity": false,
+      "proximity": 17.5522,
+      "sparsity": 17
+    },
+    "top_feature_changes": [
+      {
+        "feature": "rr_min",
+        "original_value": 15.8254,
+        "counterfactual_value": 2.4204,
+        "difference": -13.405
+      },
+      {
+        "feature": "rr_mean",
+        "original_value": 9.0141,
+        "counterfactual_value": 2.0372,
+        "difference": -6.9769
+      },
+      {
+        "feature": "median",
+        "original_value": -3.8425,
+        "counterfactual_value": 1.5042,
+        "difference": 5.3467
+      },
+      {
+        "feature": "peak_height_mean",
+        "original_value": 3.9252,
+        "counterfactual_value": 0.8427,
+        "difference": -3.0825
+      },
+      {
+        "feature": "rr_std",
+        "original_value": -2.4843,
+        "counterfactual_value": 0.0942,
+        "difference": 2.5785
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.813
+  },
+  {
+    "id": "EVAL_018",
+    "sample_index": 33,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.0326,
+    "detection_confidence": 0.4641,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows several notable differences from the nearest normal reference ECG.",
+      "key_differences": [
+        "The signal minimum is 1.35 units higher than normal, indicating a shift in the lowest point of the ECG.",
+        "The signal median is 1.05 units lower than normal, suggesting a change in the central value of the signal.",
+        "The waveform asymmetry is 1.02 units higher than normal, which may indicate potential ST segment changes."
+      ],
+      "interpretation_note": "These patterns may be associated with changes in cardiac function or conduction.",
+      "confidence_statement": "The anomaly score and distance from the normal reference suggest a moderate level of difference, indicating some uncertainty in the flag."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 2.7775,
+      "sparsity": 3
+    },
+    "top_feature_changes": [
+      {
+        "feature": "min",
+        "original_value": -1.4218,
+        "counterfactual_value": -0.0731,
+        "difference": 1.3487
+      },
+      {
+        "feature": "median",
+        "original_value": -0.1866,
+        "counterfactual_value": -1.2318,
+        "difference": -1.0452
+      },
+      {
+        "feature": "skewness",
+        "original_value": -0.1354,
+        "counterfactual_value": 0.883,
+        "difference": 1.0184
+      },
+      {
+        "feature": "peak_height_mean",
+        "original_value": 0.4933,
+        "counterfactual_value": 1.3994,
+        "difference": 0.9061
+      },
+      {
+        "feature": "var",
+        "original_value": 1.1992,
+        "counterfactual_value": 0.4893,
+        "difference": -0.7099
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.288
+  },
+  {
+    "id": "EVAL_019",
+    "sample_index": 9,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.0359,
+    "detection_confidence": 0.4692,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows several deviations from normal patterns that suggest potential abnormalities.",
+      "key_differences": [
+        "The zero crossings are 0.88 counts higher than the normal reference, indicating a change in frequency-related measures.",
+        "The signal minimum is 0.76 units higher than normal, reflecting a higher lowest point in the ECG.",
+        "The waveform peakedness is 0.64 units lower than the normal reference, which may affect QRS morphology."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in heart function or conduction.",
+      "confidence_statement": "The anomaly score and distance from the nearest normal reference suggest a moderate level of confidence in this flag."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 1.8141,
+      "sparsity": 0
+    },
+    "top_feature_changes": [
+      {
+        "feature": "zero_crossings",
+        "original_value": -1.5029,
+        "counterfactual_value": -0.6223,
+        "difference": 0.8806
+      },
+      {
+        "feature": "min",
+        "original_value": -0.4251,
+        "counterfactual_value": 0.3318,
+        "difference": 0.7569
+      },
+      {
+        "feature": "spectral_entropy",
+        "original_value": -1.1375,
+        "counterfactual_value": -0.4671,
+        "difference": 0.6704
+      },
+      {
+        "feature": "kurtosis",
+        "original_value": 0.3446,
+        "counterfactual_value": -0.2985,
+        "difference": -0.6431
+      },
+      {
+        "feature": "peak_height_mean",
+        "original_value": -0.2433,
+        "counterfactual_value": 0.1755,
+        "difference": 0.4187
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.782
+  }
+]
