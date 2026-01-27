@@ -1,1028 +1,914 @@
 [
   {
     "id": "EVAL_000",
-    "sample_index": 1205,
+    "sample_index": 1939,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.7442,
-    "detection_confidence": 0.7442,
-    "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations in several measurements compared to normal reference values.",
-      "key_differences": [
-        "Lead V3 shows a maximum RR interval that is 3.97 units lower than the normal reference.",
-        "Lead V2 has a maximum RR interval that is 3.56 units lower than normal, along with a standard deviation that is 3.54 units lower.",
-        "Lead V4's maximum RR interval is 3.25 units lower than the normal reference."
-      ],
-      "interpretation_note": "These patterns may be associated with variations in heart rhythm or electrical activity.",
-      "confidence_statement": "The anomaly score and distance from normal suggest a substantial difference, indicating a moderate level of uncertainty in the flag."
-    },
-    "counterfactual_metrics": {
-      "validity": true,
-      "proximity": 19.4281,
-      "sparsity": 84
-    },
-    "top_feature_changes": [
-      {
-        "feature": "V3_rr_max",
-        "original_value": 3.8817,
-        "counterfactual_value": -0.0859,
-        "difference": -3.9677
-      },
-      {
-        "feature": "V2_rr_max",
-        "original_value": 3.3556,
-        "counterfactual_value": -0.2004,
-        "difference": -3.556
-      },
-      {
-        "feature": "V2_rr_std",
-        "original_value": 4.1168,
-        "counterfactual_value": 0.5776,
-        "difference": -3.5391
-      },
-      {
-        "feature": "V3_rr_mean",
-        "original_value": 3.4616,
-        "counterfactual_value": -0.035,
-        "difference": -3.4965
-      },
-      {
-        "feature": "V4_rr_max",
-        "original_value": 3.1683,
-        "counterfactual_value": -0.0804,
-        "difference": -3.2487
-      }
-    ],
-    "model_used": "gpt-4o-mini",
-    "generation_time": 4.506
-  },
-  {
-    "id": "EVAL_001",
-    "sample_index": 1043,
-    "ground_truth": "anomaly",
-    "predicted": "anomaly",
-    "anomaly_score": 0.9926,
-    "detection_confidence": 0.9926,
+    "anomaly_score": 1.0,
+    "detection_confidence": 1.0,
     "explanation": {
       "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
       "key_differences": [
-        "Lead I shows a minimum RR interval that is 3.32 units lower than the normal reference.",
-        "Lead aVL has a minimum RR interval that is 3.06 units lower than the normal reference.",
-        "Lead V4-V5 correlation is 3.12 units higher than the normal reference."
+        "Lead V3 has a lower V3_vlf_power by 4.10 units compared to the normal reference.",
+        "Lead V6 has a higher V6_spectral_entropy by 3.89 units than the normal reference.",
+        "Lead I shows a higher I_spectral_entropy by 2.97 units compared to the normal reference."
       ],
-      "interpretation_note": "These patterns may be associated with variations in heart rhythm and electrical activity.",
-      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
+      "interpretation_note": "These patterns may be associated with variations in heart rhythm or electrical activity.",
+      "confidence_statement": "The high anomaly score and substantial distance from the normal reference suggest a strong likelihood of abnormality."
     },
     "counterfactual_metrics": {
-      "validity": true,
-      "proximity": 19.0027,
-      "sparsity": 94
+      "validity": false,
+      "proximity": 20.4276,
+      "sparsity": 103
     },
     "top_feature_changes": [
       {
-        "feature": "I_rr_min",
-        "original_value": 2.7329,
-        "counterfactual_value": -0.5827,
-        "difference": -3.3156
+        "feature": "V3_vlf_power",
+        "original_value": 3.4778,
+        "counterfactual_value": -0.6255,
+        "difference": -4.1033
       },
       {
-        "feature": "corr_V4_V5",
-        "original_value": -2.6299,
-        "counterfactual_value": 0.4931,
-        "difference": 3.123
-      },
-      {
-        "feature": "aVL_rr_min",
-        "original_value": 2.3766,
-        "counterfactual_value": -0.6868,
-        "difference": -3.0634
+        "feature": "V6_spectral_entropy",
+        "original_value": -5.7713,
+        "counterfactual_value": -1.8859,
+        "difference": 3.8853
       },
       {
         "feature": "I_spectral_entropy",
-        "original_value": -2.7543,
-        "counterfactual_value": 0.2819,
-        "difference": 3.0362
+        "original_value": -5.426,
+        "counterfactual_value": -2.461,
+        "difference": 2.965
       },
       {
-        "feature": "aVL_lf_hf_ratio",
-        "original_value": -2.0329,
-        "counterfactual_value": 0.7253,
-        "difference": 2.7581
+        "feature": "V5_spectral_entropy",
+        "original_value": -5.215,
+        "counterfactual_value": -2.2551,
+        "difference": 2.9599
+      },
+      {
+        "feature": "I_peak_height_mean",
+        "original_value": -1.4163,
+        "counterfactual_value": 1.2657,
+        "difference": 2.682
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 3.134
+    "generation_time": 4.496
   },
   {
-    "id": "EVAL_003",
-    "sample_index": 451,
+    "id": "EVAL_001",
+    "sample_index": 1671,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.9346,
-    "detection_confidence": 0.9346,
+    "anomaly_score": 0.9999,
+    "detection_confidence": 0.9999,
     "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations in several lead measurements compared to normal reference values.",
+      "flag_reason": "This ECG was flagged because it shows significant deviations in frequency and power characteristics compared to normal reference patterns.",
       "key_differences": [
-        "Lead II median is 3.16 units lower than the normal reference.",
-        "Lead V5 median is 3.10 units lower than the normal reference.",
-        "Lead aVR median is 2.97 units higher than the normal reference."
+        "Lead II's dominant frequency is 4.58 units lower than the normal reference.",
+        "Lead aVF's dominant frequency is 4.53 units lower than the normal reference.",
+        "Lead V5's dominant frequency is 3.63 units higher than the normal reference."
       ],
       "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
       "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
     },
     "counterfactual_metrics": {
       "validity": true,
-      "proximity": 15.3516,
-      "sparsity": 50
+      "proximity": 16.7291,
+      "sparsity": 65
     },
     "top_feature_changes": [
       {
-        "feature": "II_median",
-        "original_value": 1.7356,
-        "counterfactual_value": -1.4244,
-        "difference": -3.1599
+        "feature": "II_dominant_freq",
+        "original_value": 6.5633,
+        "counterfactual_value": 1.9794,
+        "difference": -4.5838
       },
       {
-        "feature": "V5_median",
-        "original_value": 1.7146,
-        "counterfactual_value": -1.3877,
-        "difference": -3.1023
+        "feature": "aVF_dominant_freq",
+        "original_value": 6.5994,
+        "counterfactual_value": 2.0672,
+        "difference": -4.5322
       },
       {
-        "feature": "V6_median",
-        "original_value": 1.8437,
-        "counterfactual_value": -1.2228,
-        "difference": -3.0666
+        "feature": "V5_dominant_freq",
+        "original_value": -0.0099,
+        "counterfactual_value": 3.6224,
+        "difference": 3.6323
       },
       {
-        "feature": "aVR_median",
-        "original_value": -2.2292,
-        "counterfactual_value": 0.7419,
-        "difference": 2.9711
+        "feature": "aVR_zero_crossings",
+        "original_value": 2.7511,
+        "counterfactual_value": 0.1464,
+        "difference": -2.6047
       },
       {
-        "feature": "I_vlf_power",
-        "original_value": 2.3592,
-        "counterfactual_value": -0.4923,
-        "difference": -2.8515
+        "feature": "V4_lf_hf_ratio",
+        "original_value": 0.6061,
+        "counterfactual_value": -1.9329,
+        "difference": -2.539
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 3.569
+    "generation_time": 3.462
+  },
+  {
+    "id": "EVAL_002",
+    "sample_index": 565,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.945,
+    "detection_confidence": 0.945,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
+      "key_differences": [
+        "Lead V4 shows a dominant frequency that is 4.86 units lower than the normal reference.",
+        "Lead II has a range that is 3.75 units lower than the normal reference.",
+        "Lead V6 has a low-frequency to high-frequency ratio that is 3.20 units higher than the normal reference."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
+      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
+    },
+    "counterfactual_metrics": {
+      "validity": false,
+      "proximity": 13.7897,
+      "sparsity": 41
+    },
+    "top_feature_changes": [
+      {
+        "feature": "V4_dominant_freq",
+        "original_value": 4.277,
+        "counterfactual_value": -0.5873,
+        "difference": -4.8643
+      },
+      {
+        "feature": "II_range",
+        "original_value": 3.5242,
+        "counterfactual_value": -0.229,
+        "difference": -3.7532
+      },
+      {
+        "feature": "V6_lf_hf_ratio",
+        "original_value": -1.6411,
+        "counterfactual_value": 1.5592,
+        "difference": 3.2004
+      },
+      {
+        "feature": "aVF_range",
+        "original_value": 3.1165,
+        "counterfactual_value": 0.4372,
+        "difference": -2.6793
+      },
+      {
+        "feature": "II_max",
+        "original_value": 3.0083,
+        "counterfactual_value": 0.481,
+        "difference": -2.5274
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.781
   },
   {
     "id": "EVAL_004",
-    "sample_index": 59,
+    "sample_index": 655,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.6921,
-    "detection_confidence": 0.6921,
+    "anomaly_score": 0.7864,
+    "detection_confidence": 0.7864,
     "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns observed in the reference ECGs.",
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
       "key_differences": [
-        "Lead V5 shows a lower high-frequency to low-frequency ratio, which is 6.14 units below the normal reference.",
-        "Lead aVL has a total power measurement that is 5.02 units lower than what is typically seen in normal ECGs.",
-        "Lead V4's dominant frequency is 3.59 units lower compared to the normal reference."
+        "Lead V1 total power is 2.25 units lower than the normal reference.",
+        "Lead V6 VLF power is 2.03 units higher than the normal reference.",
+        "Lead aVF has 1.93 more peaks than the normal reference."
       ],
-      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity or other underlying factors.",
-      "confidence_statement": "The anomaly score and distance from normal suggest a substantial difference, indicating a moderate level of uncertainty in the flag's reliability."
+      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity and rhythm.",
+      "confidence_statement": "The anomaly score of 0.786 and a distance of 12.516 from normal suggest a notable difference, but this does not confirm a specific clinical condition."
     },
     "counterfactual_metrics": {
       "validity": true,
-      "proximity": 19.534,
-      "sparsity": 95
+      "proximity": 12.5164,
+      "sparsity": 53
     },
     "top_feature_changes": [
       {
-        "feature": "V5_lf_hf_ratio",
-        "original_value": 7.021,
-        "counterfactual_value": 0.876,
-        "difference": -6.1449
-      },
-      {
-        "feature": "aVL_total_power",
-        "original_value": 4.8062,
-        "counterfactual_value": -0.2184,
-        "difference": -5.0246
-      },
-      {
-        "feature": "V4_dominant_freq",
-        "original_value": 3.6968,
-        "counterfactual_value": 0.1112,
-        "difference": -3.5856
-      },
-      {
-        "feature": "I_range",
-        "original_value": 2.0565,
-        "counterfactual_value": -1.3042,
-        "difference": -3.3607
+        "feature": "V1_total_power",
+        "original_value": 1.9869,
+        "counterfactual_value": -0.2641,
+        "difference": -2.251
       },
       {
         "feature": "V6_vlf_power",
-        "original_value": 2.8317,
-        "counterfactual_value": 0.0573,
-        "difference": -2.7744
+        "original_value": -0.3639,
+        "counterfactual_value": 1.6649,
+        "difference": 2.0288
+      },
+      {
+        "feature": "aVF_n_peaks",
+        "original_value": -0.6249,
+        "counterfactual_value": 1.3013,
+        "difference": 1.9262
+      },
+      {
+        "feature": "aVF_hr_estimate",
+        "original_value": -0.6346,
+        "counterfactual_value": 1.2447,
+        "difference": 1.8794
+      },
+      {
+        "feature": "V4_lf_hf_ratio",
+        "original_value": 2.0787,
+        "counterfactual_value": 0.4318,
+        "difference": -1.6469
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 3.238
+    "generation_time": 4.437
   },
   {
     "id": "EVAL_005",
-    "sample_index": 818,
+    "sample_index": 243,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.9388,
-    "detection_confidence": 0.9388,
+    "anomaly_score": 0.998,
+    "detection_confidence": 0.998,
     "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns observed in the reference ECGs.",
+      "flag_reason": "This ECG was flagged because it shows significant deviations in several key features compared to normal reference patterns.",
       "key_differences": [
-        "Lead II shows 3.91 units lower zero crossings compared to the normal reference.",
-        "Lead aVF has 3.86 units lower zero crossings than the normal reference.",
-        "Lead V3's dominant frequency is 3.36 units lower than that of the normal reference."
+        "Lead I total power is 7.87 units lower than the normal reference.",
+        "Lead aVR median is 2.77 units higher than the normal reference.",
+        "Lead II median is 2.50 units lower than the normal reference."
       ],
-      "interpretation_note": "These patterns may be associated with variations in electrical activity of the heart.",
+      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
       "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
     },
     "counterfactual_metrics": {
       "validity": true,
-      "proximity": 16.5407,
-      "sparsity": 62
+      "proximity": 16.69,
+      "sparsity": 65
     },
     "top_feature_changes": [
       {
-        "feature": "II_zero_crossings",
-        "original_value": 3.6079,
-        "counterfactual_value": -0.3036,
-        "difference": -3.9115
+        "feature": "I_total_power",
+        "original_value": 7.9174,
+        "counterfactual_value": 0.0485,
+        "difference": -7.8689
       },
       {
-        "feature": "aVF_zero_crossings",
-        "original_value": 3.6512,
-        "counterfactual_value": -0.207,
-        "difference": -3.8582
+        "feature": "aVR_median",
+        "original_value": -1.7963,
+        "counterfactual_value": 0.9725,
+        "difference": 2.7688
       },
       {
-        "feature": "V3_dominant_freq",
-        "original_value": 2.8486,
-        "counterfactual_value": -0.5084,
-        "difference": -3.357
+        "feature": "I_median",
+        "original_value": 2.1511,
+        "counterfactual_value": -0.6138,
+        "difference": -2.7649
       },
       {
-        "feature": "V2_peak_height_std",
-        "original_value": 2.1119,
-        "counterfactual_value": -0.8323,
-        "difference": -2.9442
+        "feature": "II_median",
+        "original_value": 1.2889,
+        "counterfactual_value": -1.2066,
+        "difference": -2.4955
       },
       {
-        "feature": "III_zero_crossings",
-        "original_value": 1.8816,
-        "counterfactual_value": -0.8382,
-        "difference": -2.7199
+        "feature": "V6_median",
+        "original_value": 1.311,
+        "counterfactual_value": -1.1495,
+        "difference": -2.4605
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 3.125
+    "generation_time": 2.837
   },
   {
     "id": "EVAL_006",
-    "sample_index": 333,
+    "sample_index": 985,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.8291,
-    "detection_confidence": 0.8291,
+    "anomaly_score": 0.9049,
+    "detection_confidence": 0.9049,
     "explanation": {
       "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
       "key_differences": [
-        "Lead V6 shows a lower number of zero crossings compared to the normal reference.",
-        "Lead V3 has a higher mean value than the normal reference.",
-        "Lead I exhibits a higher peak height standard deviation than the normal reference."
+        "Lead I shows a lower very low frequency power, which is 3.35 units below the normal reference.",
+        "Lead V4 has a lower minimum RR interval by 2.82 units compared to normal.",
+        "Lead V6 exhibits a higher very low frequency power, which is 2.66 units above the normal reference."
       ],
-      "interpretation_note": "These patterns may be associated with variations in electrical activity of the heart.",
-      "confidence_statement": "The anomaly score and distance from normal suggest a notable difference, but this does not confirm any specific clinical condition."
+      "interpretation_note": "These patterns may be associated with variations in heart rhythm and electrical activity.",
+      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a notable difference, but this does not confirm a specific clinical condition."
     },
     "counterfactual_metrics": {
       "validity": true,
-      "proximity": 17.237,
+      "proximity": 12.52,
+      "sparsity": 39
+    },
+    "top_feature_changes": [
+      {
+        "feature": "I_vlf_power",
+        "original_value": 2.6457,
+        "counterfactual_value": -0.7085,
+        "difference": -3.3542
+      },
+      {
+        "feature": "V4_rr_min",
+        "original_value": 2.4563,
+        "counterfactual_value": -0.3636,
+        "difference": -2.8199
+      },
+      {
+        "feature": "V6_vlf_power",
+        "original_value": 0.8469,
+        "counterfactual_value": 3.5107,
+        "difference": 2.6638
+      },
+      {
+        "feature": "V4_n_peaks",
+        "original_value": -1.5058,
+        "counterfactual_value": 1.0501,
+        "difference": 2.5559
+      },
+      {
+        "feature": "V4_peak_height_std",
+        "original_value": -1.3697,
+        "counterfactual_value": 1.1279,
+        "difference": 2.4976
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 3.967
+  },
+  {
+    "id": "EVAL_007",
+    "sample_index": 117,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.8757,
+    "detection_confidence": 0.8757,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
+      "key_differences": [
+        "Lead V5 has a lower lf/hf ratio by 6.45 units compared to the normal reference.",
+        "Lead V4's dominant frequency is 4.39 units lower than that of the normal reference.",
+        "Lead V6 shows a higher peak height standard deviation by 2.30 units compared to the normal reference."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
+      "confidence_statement": "The anomaly score of 0.876 and a distance of 17.767 from the nearest normal reference suggest a high level of deviation from typical ECG patterns."
+    },
+    "counterfactual_metrics": {
+      "validity": true,
+      "proximity": 17.7666,
       "sparsity": 82
     },
     "top_feature_changes": [
       {
-        "feature": "V6_zero_crossings",
-        "original_value": 3.8536,
-        "counterfactual_value": -0.2526,
-        "difference": -4.1061
+        "feature": "V5_lf_hf_ratio",
+        "original_value": 6.8876,
+        "counterfactual_value": 0.4404,
+        "difference": -6.4472
       },
       {
-        "feature": "V3_mean",
-        "original_value": -2.4823,
-        "counterfactual_value": 1.3176,
-        "difference": 3.7999
+        "feature": "V4_dominant_freq",
+        "original_value": 4.243,
+        "counterfactual_value": -0.1451,
+        "difference": -4.3881
       },
       {
-        "feature": "V5_zero_crossings",
-        "original_value": 3.1614,
-        "counterfactual_value": -0.1755,
-        "difference": -3.3369
+        "feature": "V6_vlf_power",
+        "original_value": 2.9295,
+        "counterfactual_value": -0.5738,
+        "difference": -3.5033
       },
       {
-        "feature": "corr_V2_V3",
-        "original_value": -2.1234,
-        "counterfactual_value": 0.6483,
-        "difference": 2.7717
+        "feature": "aVL_total_power",
+        "original_value": 4.0349,
+        "counterfactual_value": 0.9662,
+        "difference": -3.0687
       },
       {
-        "feature": "V4_zero_crossings",
-        "original_value": 2.9815,
-        "counterfactual_value": 0.2234,
-        "difference": -2.7581
+        "feature": "V1_median",
+        "original_value": 2.0006,
+        "counterfactual_value": -0.8686,
+        "difference": -2.8692
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 2.952
+    "generation_time": 6.418
   },
   {
-    "id": "EVAL_007",
-    "sample_index": 1086,
+    "id": "EVAL_008",
+    "sample_index": 1402,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.9233,
-    "detection_confidence": 0.9233,
+    "anomaly_score": 0.9992,
+    "detection_confidence": 0.9992,
     "explanation": {
-      "flag_reason": "This ECG was flagged because it shows substantial differences in several key features compared to normal reference patterns.",
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
       "key_differences": [
-        "Lead V5 shows a significantly lower low-frequency power, which is 4.38 units below normal.",
-        "Lead aVF has a lower range, being 3.13 units below the normal reference.",
-        "Lead V4 has a higher mean value, which is 3.08 units above normal."
+        "Lead V6 is 3.03 units lower than the normal reference, indicating reduced electrical activity in that area.",
+        "Lead aVR shows a 2.94 unit lower lf/hf ratio compared to normal, suggesting altered autonomic balance.",
+        "Lead V5 is 2.68 units higher than normal, which may reflect increased electrical activity."
       ],
-      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity that could warrant further investigation.",
-      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a notable deviation, but this does not confirm a specific condition."
+      "interpretation_note": "These patterns may be associated with variations in cardiac function and electrical conduction.",
+      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
     },
     "counterfactual_metrics": {
-      "validity": true,
-      "proximity": 17.4321,
-      "sparsity": 85
+      "validity": false,
+      "proximity": 15.1821,
+      "sparsity": 56
     },
     "top_feature_changes": [
       {
-        "feature": "V5_vlf_power",
-        "original_value": 4.2297,
-        "counterfactual_value": -0.1453,
-        "difference": -4.375
+        "feature": "V6_median",
+        "original_value": 2.4846,
+        "counterfactual_value": -0.5478,
+        "difference": -3.0323
       },
       {
-        "feature": "aVF_range",
-        "original_value": 2.2386,
-        "counterfactual_value": -0.8942,
-        "difference": -3.1327
+        "feature": "aVR_lf_hf_ratio",
+        "original_value": 0.9941,
+        "counterfactual_value": -1.9503,
+        "difference": -2.9444
       },
       {
-        "feature": "V4_mean",
-        "original_value": -0.8596,
-        "counterfactual_value": 2.2168,
-        "difference": 3.0764
+        "feature": "V3_mean",
+        "original_value": 0.9576,
+        "counterfactual_value": -1.8435,
+        "difference": -2.8011
       },
       {
-        "feature": "V6_dominant_freq",
-        "original_value": -0.7257,
-        "counterfactual_value": 2.2772,
-        "difference": 3.0029
+        "feature": "V5_max",
+        "original_value": -3.0035,
+        "counterfactual_value": -0.3207,
+        "difference": 2.6828
       },
       {
-        "feature": "aVR_median",
-        "original_value": -1.8969,
-        "counterfactual_value": 1.0979,
-        "difference": 2.9948
+        "feature": "III_mean",
+        "original_value": 0.9767,
+        "counterfactual_value": -1.6421,
+        "difference": -2.6188
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 3.856
+    "generation_time": 3.142
   },
   {
-    "id": "EVAL_009",
-    "sample_index": 883,
+    "id": "EVAL_010",
+    "sample_index": 2031,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.9803,
-    "detection_confidence": 0.9803,
+    "anomaly_score": 0.9751,
+    "detection_confidence": 0.9751,
     "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations in several key features compared to normal reference patterns.",
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns observed in the reference ECGs.",
       "key_differences": [
-        "Lead III shows a lower low-frequency power by 2.96 units compared to normal.",
-        "Lead V3 has 2.65 fewer zero crossings than the normal reference.",
-        "Lead aVF has a peak height standard deviation that is 2.63 units higher than normal."
+        "The correlation between leads V4 and V5 is 3.67 units lower than the normal reference.",
+        "Lead V1's heart rate variability is 3.26 units higher than the normal reference.",
+        "Lead V3's spectral entropy is 2.85 units higher than the normal reference."
       ],
       "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity and rhythm.",
       "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
     },
     "counterfactual_metrics": {
-      "validity": true,
-      "proximity": 15.9804,
-      "sparsity": 81
+      "validity": false,
+      "proximity": 19.1794,
+      "sparsity": 114
     },
     "top_feature_changes": [
       {
-        "feature": "III_vlf_power",
-        "original_value": 2.3222,
-        "counterfactual_value": -0.6343,
-        "difference": -2.9565
+        "feature": "corr_V4_V5",
+        "original_value": -0.7085,
+        "counterfactual_value": -4.3809,
+        "difference": -3.6724
       },
       {
-        "feature": "V3_zero_crossings",
-        "original_value": 2.423,
-        "counterfactual_value": -0.2312,
-        "difference": -2.6543
+        "feature": "V1_hrv",
+        "original_value": -1.6525,
+        "counterfactual_value": 1.6059,
+        "difference": 3.2585
       },
       {
-        "feature": "aVF_peak_height_std",
-        "original_value": -1.1539,
-        "counterfactual_value": 1.4738,
-        "difference": 2.6277
+        "feature": "V3_spectral_entropy",
+        "original_value": -3.1265,
+        "counterfactual_value": -0.2794,
+        "difference": 2.8471
       },
       {
-        "feature": "I_mean",
-        "original_value": -1.1568,
-        "counterfactual_value": 1.2357,
-        "difference": 2.3925
+        "feature": "II_vlf_power",
+        "original_value": -0.5171,
+        "counterfactual_value": 2.2269,
+        "difference": 2.7441
       },
       {
-        "feature": "V5_vlf_power",
-        "original_value": 2.2008,
-        "counterfactual_value": -0.0305,
-        "difference": -2.2313
+        "feature": "aVF_spectral_entropy",
+        "original_value": -2.2192,
+        "counterfactual_value": 0.4474,
+        "difference": 2.6666
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 3.738
-  },
-  {
-    "id": "EVAL_010",
-    "sample_index": 843,
-    "ground_truth": "anomaly",
-    "predicted": "anomaly",
-    "anomaly_score": 0.8226,
-    "detection_confidence": 0.8226,
-    "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations in key features compared to normal reference patterns.",
-      "key_differences": [
-        "Lead V6's dominant frequency is 3.76 units lower than the normal reference.",
-        "Lead I's mean value is 3.30 units lower than the normal reference.",
-        "Lead V5's skewness is 2.91 units higher than the normal reference."
-      ],
-      "interpretation_note": "These patterns may be associated with variations in heart function or electrical activity.",
-      "confidence_statement": "The anomaly score of 0.823 and a distance of 15.969 from the nearest normal reference suggest a high level of deviation from typical ECG patterns."
-    },
-    "counterfactual_metrics": {
-      "validity": true,
-      "proximity": 15.9694,
-      "sparsity": 71
-    },
-    "top_feature_changes": [
-      {
-        "feature": "V6_dominant_freq",
-        "original_value": 4.2492,
-        "counterfactual_value": 0.4844,
-        "difference": -3.7648
-      },
-      {
-        "feature": "I_mean",
-        "original_value": 0.9882,
-        "counterfactual_value": -2.3118,
-        "difference": -3.2999
-      },
-      {
-        "feature": "V5_skewness",
-        "original_value": -2.7591,
-        "counterfactual_value": 0.1459,
-        "difference": 2.9051
-      },
-      {
-        "feature": "III_mean",
-        "original_value": -1.6382,
-        "counterfactual_value": 0.9841,
-        "difference": 2.6222
-      },
-      {
-        "feature": "V5_median",
-        "original_value": 1.9809,
-        "counterfactual_value": -0.5825,
-        "difference": -2.5633
-      }
-    ],
-    "model_used": "gpt-4o-mini",
-    "generation_time": 3.077
+    "generation_time": 3.013
   },
   {
     "id": "EVAL_011",
-    "sample_index": 45,
+    "sample_index": 184,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.5095,
-    "detection_confidence": 0.5095,
+    "anomaly_score": 0.9936,
+    "detection_confidence": 0.9936,
     "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations in several key features compared to a normal reference ECG.",
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple lead measurements.",
       "key_differences": [
-        "Lead V5 shows a dominant frequency that is 3.46 units higher than normal.",
-        "Lead V4 has a mean value that is 3.25 units lower than normal.",
-        "Lead aVF has both the rr_mean and dominant frequency higher than normal by 2.32 and 2.24 units, respectively."
+        "The correlation between leads V5 and V6 is 10.45 units higher than the normal reference.",
+        "The skewness of lead V5 is 4.56 units higher than what is typically seen in normal ECGs.",
+        "The minimum value of lead V5 is 3.51 units higher than the normal reference."
       ],
-      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
-      "confidence_statement": "The anomaly score of 0.510 and a distance of 13.196 from the nearest normal reference indicate a notable difference from typical ECG patterns."
+      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity that could warrant further investigation.",
+      "confidence_statement": "The high anomaly score and substantial distance from the nearest normal reference suggest a strong likelihood of abnormality."
     },
     "counterfactual_metrics": {
-      "validity": true,
-      "proximity": 13.196,
-      "sparsity": 45
+      "validity": false,
+      "proximity": 22.9793,
+      "sparsity": 100
     },
     "top_feature_changes": [
       {
-        "feature": "V5_dominant_freq",
-        "original_value": -0.5655,
-        "counterfactual_value": 2.8968,
-        "difference": 3.4623
+        "feature": "corr_V5_V6",
+        "original_value": -10.7654,
+        "counterfactual_value": -0.3198,
+        "difference": 10.4456
       },
       {
-        "feature": "V4_mean",
-        "original_value": 1.7895,
-        "counterfactual_value": -1.4578,
-        "difference": -3.2473
+        "feature": "V5_skewness",
+        "original_value": -3.5601,
+        "counterfactual_value": 1.0042,
+        "difference": 4.5643
       },
       {
-        "feature": "V4_dominant_freq",
-        "original_value": -0.5018,
-        "counterfactual_value": 2.5016,
-        "difference": 3.0033
+        "feature": "V5_max",
+        "original_value": -3.5629,
+        "counterfactual_value": 0.5956,
+        "difference": 4.1584
       },
       {
-        "feature": "aVF_rr_mean",
-        "original_value": -0.1231,
-        "counterfactual_value": 2.1946,
-        "difference": 2.3178
+        "feature": "V4_rr_min",
+        "original_value": 3.459,
+        "counterfactual_value": -0.5516,
+        "difference": -4.0106
       },
       {
-        "feature": "aVF_dominant_freq",
-        "original_value": 0.104,
-        "counterfactual_value": 2.3397,
-        "difference": 2.2357
+        "feature": "V4_spectral_entropy",
+        "original_value": -4.3323,
+        "counterfactual_value": -0.5302,
+        "difference": 3.8021
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 3.85
-  },
-  {
-    "id": "EVAL_012",
-    "sample_index": 50,
-    "ground_truth": "anomaly",
-    "predicted": "anomaly",
-    "anomaly_score": 0.8098,
-    "detection_confidence": 0.8098,
-    "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in several lead measurements.",
-      "key_differences": [
-        "Lead aVR shows a mean value that is 4.54 units lower than the normal reference.",
-        "Lead V1 has a total power that is 2.96 units higher than the normal reference.",
-        "Several leads, including II, V5, and V4, show lower zero-crossing values, with differences ranging from 2.45 to 2.53 units."
-      ],
-      "interpretation_note": "These patterns may be associated with variations in electrical activity of the heart.",
-      "confidence_statement": "The anomaly score of 0.810 and a distance of 15.764 from the nearest normal reference suggest a notable difference, but this does not confirm a specific condition."
-    },
-    "counterfactual_metrics": {
-      "validity": true,
-      "proximity": 15.7645,
-      "sparsity": 62
-    },
-    "top_feature_changes": [
-      {
-        "feature": "aVR_mean",
-        "original_value": 2.9462,
-        "counterfactual_value": -1.593,
-        "difference": -4.5393
-      },
-      {
-        "feature": "aVR_vlf_power",
-        "original_value": 3.5849,
-        "counterfactual_value": 0.0344,
-        "difference": -3.5505
-      },
-      {
-        "feature": "V1_total_power",
-        "original_value": -0.2415,
-        "counterfactual_value": 2.7197,
-        "difference": 2.9612
-      },
-      {
-        "feature": "II_zero_crossings",
-        "original_value": 1.7624,
-        "counterfactual_value": -0.7719,
-        "difference": -2.5342
-      },
-      {
-        "feature": "V5_zero_crossings",
-        "original_value": 1.9553,
-        "counterfactual_value": -0.5374,
-        "difference": -2.4926
-      }
-    ],
-    "model_used": "gpt-4o-mini",
-    "generation_time": 4.542
+    "generation_time": 3.86
   },
   {
     "id": "EVAL_013",
-    "sample_index": 872,
+    "sample_index": 1510,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.9708,
-    "detection_confidence": 0.9708,
+    "anomaly_score": 0.9228,
+    "detection_confidence": 0.9228,
     "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations in several key measurements compared to normal reference patterns.",
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
       "key_differences": [
-        "Lead aVF shows lower values in maximum, standard deviation, and heart rate variability compared to normal.",
-        "Lead V5 and Lead I also exhibit lower median values than those found in normal references.",
-        "Lead aVR has a higher median value but lower very low frequency power than the normal reference."
+        "Lead II shows a minimum RR interval that is 2.40 units lower than the normal reference.",
+        "Lead aVF has a minimum RR interval that is 2.36 units lower than the normal reference.",
+        "Lead V2 exhibits higher heart rate variability by 2.04 units compared to the normal reference."
       ],
-      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity and autonomic regulation.",
-      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
+      "interpretation_note": "These patterns may be associated with variations in heart rhythm and electrical activity.",
+      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a notable difference, but this does not confirm a specific condition."
     },
     "counterfactual_metrics": {
-      "validity": true,
-      "proximity": 19.4317,
-      "sparsity": 58
-    },
-    "top_feature_changes": [
-      {
-        "feature": "aVF_rr_max",
-        "original_value": 7.4477,
-        "counterfactual_value": 0.881,
-        "difference": -6.5667
-      },
-      {
-        "feature": "aVF_rr_std",
-        "original_value": 6.2552,
-        "counterfactual_value": 0.9382,
-        "difference": -5.3171
-      },
-      {
-        "feature": "aVF_hrv",
-        "original_value": 3.8534,
-        "counterfactual_value": -0.0411,
-        "difference": -3.8945
-      },
-      {
-        "feature": "V5_median",
-        "original_value": 2.0053,
-        "counterfactual_value": -1.8252,
-        "difference": -3.8305
-      },
-      {
-        "feature": "I_median",
-        "original_value": 2.0428,
-        "counterfactual_value": -1.7134,
-        "difference": -3.7561
-      }
-    ],
-    "model_used": "gpt-4o-mini",
-    "generation_time": 3.653
-  },
-  {
-    "id": "EVAL_014",
-    "sample_index": 247,
-    "ground_truth": "anomaly",
-    "predicted": "anomaly",
-    "anomaly_score": 0.9241,
-    "detection_confidence": 0.9241,
-    "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations in several key measurements compared to normal reference patterns.",
-      "key_differences": [
-        "Lead II measurements are lower than normal, with both the minimum and mean values being significantly reduced.",
-        "Lead V1 shows higher maximum values, indicating an increase in certain electrical activity.",
-        "Lead I and Lead V4 also exhibit lower values in their respective measurements compared to normal."
-      ],
-      "interpretation_note": "These patterns may be associated with variations in heart function or electrical conduction.",
-      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood that this ECG is different from typical cases."
-    },
-    "counterfactual_metrics": {
-      "validity": true,
-      "proximity": 22.786,
-      "sparsity": 115
+      "validity": false,
+      "proximity": 12.7549,
+      "sparsity": 49
     },
     "top_feature_changes": [
       {
         "feature": "II_rr_min",
-        "original_value": 5.5537,
-        "counterfactual_value": -0.0709,
-        "difference": -5.6246
+        "original_value": 2.0029,
+        "counterfactual_value": -0.4019,
+        "difference": -2.4047
       },
       {
-        "feature": "II_rr_mean",
-        "original_value": 4.8957,
-        "counterfactual_value": 0.4836,
-        "difference": -4.4122
+        "feature": "aVF_rr_min",
+        "original_value": 2.0776,
+        "counterfactual_value": -0.2849,
+        "difference": -2.3625
       },
       {
-        "feature": "V1_max",
-        "original_value": -0.3349,
-        "counterfactual_value": 3.339,
-        "difference": 3.6738
+        "feature": "aVL_zero_crossings",
+        "original_value": 1.5704,
+        "counterfactual_value": -0.6787,
+        "difference": -2.2491
       },
       {
-        "feature": "r_wave_v1",
-        "original_value": -0.3349,
-        "counterfactual_value": 3.339,
-        "difference": 3.6738
+        "feature": "V2_hrv",
+        "original_value": -1.5018,
+        "counterfactual_value": 0.5348,
+        "difference": 2.0366
       },
       {
-        "feature": "I_rr_max",
-        "original_value": 3.9518,
-        "counterfactual_value": 0.3935,
-        "difference": -3.5583
+        "feature": "III_rr_min",
+        "original_value": 1.5856,
+        "counterfactual_value": -0.4413,
+        "difference": -2.027
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 3.34
+    "generation_time": 2.93
   },
   {
-    "id": "EVAL_015",
-    "sample_index": 174,
+    "id": "EVAL_014",
+    "sample_index": 1832,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.9843,
-    "detection_confidence": 0.9843,
+    "anomaly_score": 0.9995,
+    "detection_confidence": 0.9995,
     "explanation": {
       "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple lead measurements.",
       "key_differences": [
-        "The correlation between leads V2 and V3 is 5.72 units higher than the normal reference.",
-        "The total power in lead V1 is 3.67 units higher than what is typically seen.",
-        "The mean value in lead V3 is 3.06 units higher than the normal reference."
+        "Lead V3 V3_rr_max is 7.83 units lower than the normal reference.",
+        "Lead V4 V4_total_power is 7.22 units lower than the normal reference.",
+        "Lead V3 V3_rr_std is 6.41 units lower than the normal reference."
       ],
       "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
       "confidence_statement": "The high anomaly score and substantial distance from the nearest normal reference suggest a strong likelihood of abnormality."
     },
     "counterfactual_metrics": {
-      "validity": false,
-      "proximity": 16.7243,
-      "sparsity": 65
+      "validity": true,
+      "proximity": 21.3378,
+      "sparsity": 88
     },
     "top_feature_changes": [
       {
-        "feature": "corr_V2_V3",
-        "original_value": -5.0323,
-        "counterfactual_value": 0.6862,
-        "difference": 5.7185
+        "feature": "V3_rr_max",
+        "original_value": 7.1008,
+        "counterfactual_value": -0.7243,
+        "difference": -7.8251
       },
       {
-        "feature": "V1_total_power",
-        "original_value": -0.2272,
-        "counterfactual_value": 3.4461,
-        "difference": 3.6733
+        "feature": "V4_total_power",
+        "original_value": 6.9649,
+        "counterfactual_value": -0.2522,
+        "difference": -7.2172
       },
       {
-        "feature": "V3_skewness",
-        "original_value": 2.0246,
-        "counterfactual_value": -1.4809,
-        "difference": -3.5055
+        "feature": "V3_rr_std",
+        "original_value": 5.8168,
+        "counterfactual_value": -0.5975,
+        "difference": -6.4143
       },
       {
-        "feature": "V3_mean",
-        "original_value": -1.7388,
-        "counterfactual_value": 1.3176,
-        "difference": 3.0564
+        "feature": "aVR_rr_min",
+        "original_value": 4.2779,
+        "counterfactual_value": -0.4261,
+        "difference": -4.704
       },
       {
-        "feature": "V3_peak_height_std",
-        "original_value": 2.3383,
-        "counterfactual_value": -0.4724,
-        "difference": -2.8108
+        "feature": "V3_rr_mean",
+        "original_value": 4.5309,
+        "counterfactual_value": 0.1628,
+        "difference": -4.3681
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 3.755
+    "generation_time": 4.165
   },
   {
-    "id": "EVAL_016",
-    "sample_index": 536,
+    "id": "EVAL_015",
+    "sample_index": 1694,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.9907,
-    "detection_confidence": 0.9907,
+    "anomaly_score": 0.9492,
+    "detection_confidence": 0.9492,
     "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
+      "flag_reason": "This ECG was flagged because it shows significant deviations in several key features compared to normal reference patterns.",
       "key_differences": [
-        "Lead II shows a heart rate estimate that is 3.84 units lower than the normal reference.",
-        "Lead V1 has total power that is 3.58 units higher than the normal reference.",
-        "Lead V3 exhibits several elevated metrics, including variance, standard deviation, and RMS, all 3.55 units higher than normal."
+        "Lead V5 shows a higher very low frequency power by 3.69 units compared to normal.",
+        "Lead I has a mean value that is 2.54 units higher than the normal reference.",
+        "Lead V6 displays a lower very low frequency power by 2.13 units than the normal reference."
       ],
-      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity and overall heart function.",
-      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood that this ECG is abnormal."
-    },
-    "counterfactual_metrics": {
-      "validity": false,
-      "proximity": 16.7617,
-      "sparsity": 68
-    },
-    "top_feature_changes": [
-      {
-        "feature": "II_hr_estimate",
-        "original_value": 2.5306,
-        "counterfactual_value": -1.3084,
-        "difference": -3.839
-      },
-      {
-        "feature": "II_n_peaks",
-        "original_value": 2.4567,
-        "counterfactual_value": -1.3117,
-        "difference": -3.7684
-      },
-      {
-        "feature": "V1_total_power",
-        "original_value": -0.1296,
-        "counterfactual_value": 3.4461,
-        "difference": 3.5758
-      },
-      {
-        "feature": "V3_var",
-        "original_value": -3.5997,
-        "counterfactual_value": -0.0529,
-        "difference": 3.5468
-      },
-      {
-        "feature": "V3_std",
-        "original_value": -3.5997,
-        "counterfactual_value": -0.053,
-        "difference": 3.5468
-      }
-    ],
-    "model_used": "gpt-4o-mini",
-    "generation_time": 3.543
-  },
-  {
-    "id": "EVAL_017",
-    "sample_index": 787,
-    "ground_truth": "anomaly",
-    "predicted": "anomaly",
-    "anomaly_score": 0.9964,
-    "detection_confidence": 0.9964,
-    "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations in key features compared to normal reference patterns.",
-      "key_differences": [
-        "Lead I's dominant frequency is 3.55 units lower than normal, suggesting altered electrical activity.",
-        "Lead III's very low frequency power is 3.23 units lower than normal, indicating potential changes in heart function.",
-        "Lead aVL's mean value is 2.56 units higher than normal, which may reflect abnormal electrical conduction."
-      ],
-      "interpretation_note": "These patterns may be associated with variations in heart rhythm and electrical conduction.",
-      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
+      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity and autonomic regulation.",
+      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality in this ECG."
     },
     "counterfactual_metrics": {
       "validity": true,
-      "proximity": 15.7667,
-      "sparsity": 63
+      "proximity": 11.7264,
+      "sparsity": 34
     },
     "top_feature_changes": [
       {
-        "feature": "I_dominant_freq",
-        "original_value": 3.3786,
-        "counterfactual_value": -0.1719,
-        "difference": -3.5505
+        "feature": "V5_vlf_power",
+        "original_value": -0.6824,
+        "counterfactual_value": 3.008,
+        "difference": 3.6904
       },
       {
-        "feature": "III_vlf_power",
-        "original_value": 2.567,
-        "counterfactual_value": -0.6667,
-        "difference": -3.2336
+        "feature": "I_mean",
+        "original_value": -1.2314,
+        "counterfactual_value": 1.3056,
+        "difference": 2.537
       },
       {
-        "feature": "V1_skewness",
-        "original_value": 2.1901,
-        "counterfactual_value": -0.6184,
-        "difference": -2.8085
+        "feature": "V6_vlf_power",
+        "original_value": 1.4442,
+        "counterfactual_value": -0.6868,
+        "difference": -2.131
       },
       {
-        "feature": "aVL_mean",
-        "original_value": -1.6523,
-        "counterfactual_value": 0.9119,
-        "difference": 2.5641
-      },
-      {
-        "feature": "V1_mean",
-        "original_value": -1.205,
-        "counterfactual_value": 1.2851,
-        "difference": 2.4902
-      }
-    ],
-    "model_used": "gpt-4o-mini",
-    "generation_time": 4.785
-  },
-  {
-    "id": "EVAL_018",
-    "sample_index": 847,
-    "ground_truth": "anomaly",
-    "predicted": "anomaly",
-    "anomaly_score": 0.3238,
-    "detection_confidence": 0.3238,
-    "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations in several key features compared to a normal reference ECG.",
-      "key_differences": [
-        "Lead III shows a lower very low frequency power by 4.28 units compared to normal.",
-        "Lead V5 has a mean value that is 4.22 units lower than the normal reference.",
-        "Lead II has a mean value that is 2.45 units lower than the normal reference."
-      ],
-      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
-      "confidence_statement": "The anomaly score and distance from normal suggest a notable difference, but this does not confirm any specific condition."
-    },
-    "counterfactual_metrics": {
-      "validity": false,
-      "proximity": 14.7491,
-      "sparsity": 56
-    },
-    "top_feature_changes": [
-      {
-        "feature": "III_vlf_power",
-        "original_value": 3.642,
-        "counterfactual_value": -0.6343,
-        "difference": -4.2763
+        "feature": "V5_lf_hf_ratio",
+        "original_value": -0.49,
+        "counterfactual_value": 1.4677,
+        "difference": 1.9577
       },
       {
         "feature": "V5_mean",
-        "original_value": 1.8951,
-        "counterfactual_value": -2.3228,
-        "difference": -4.2178
-      },
-      {
-        "feature": "III_mean",
-        "original_value": 3.2785,
-        "counterfactual_value": -0.4909,
-        "difference": -3.7695
-      },
-      {
-        "feature": "II_mean",
-        "original_value": 1.8137,
-        "counterfactual_value": -0.6413,
-        "difference": -2.4549
-      },
-      {
-        "feature": "V1_n_peaks",
-        "original_value": 1.6842,
-        "counterfactual_value": -0.3051,
-        "difference": -1.9893
+        "original_value": 0.0505,
+        "counterfactual_value": -1.867,
+        "difference": -1.9176
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 5.5
+    "generation_time": 3.955
   },
   {
-    "id": "EVAL_019",
-    "sample_index": 435,
+    "id": "EVAL_017",
+    "sample_index": 1537,
     "ground_truth": "anomaly",
     "predicted": "anomaly",
-    "anomaly_score": 0.6317,
-    "detection_confidence": 0.6317,
+    "anomaly_score": 0.8351,
+    "detection_confidence": 0.8351,
     "explanation": {
-      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in several key features.",
       "key_differences": [
-        "Lead V1 shows total power that is 3.68 units higher than the normal reference.",
-        "Lead V2 has a peak height standard deviation that is 3.36 units lower than the normal reference.",
-        "Lead II shows a minimum RR interval that is 3.36 units lower than the normal reference."
+        "Lead II shows a lower very low frequency power by 3.68 units compared to the normal reference.",
+        "Lead V3 has a dominant frequency that is 3.42 units lower than the normal reference.",
+        "Lead aVF has 3.30 fewer zero crossings than the normal reference."
       ],
       "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
-      "confidence_statement": "The anomaly score and distance from the nearest normal reference suggest a notable difference, but this does not confirm a specific condition."
+      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a notable difference in this ECG."
     },
     "counterfactual_metrics": {
-      "validity": false,
-      "proximity": 16.2183,
-      "sparsity": 69
+      "validity": true,
+      "proximity": 15.5664,
+      "sparsity": 64
     },
     "top_feature_changes": [
       {
-        "feature": "V1_total_power",
-        "original_value": -0.2349,
-        "counterfactual_value": 3.4461,
-        "difference": 3.681
+        "feature": "II_vlf_power",
+        "original_value": 5.7303,
+        "counterfactual_value": 2.053,
+        "difference": -3.6773
       },
       {
-        "feature": "V2_peak_height_std",
-        "original_value": 2.8797,
-        "counterfactual_value": -0.4831,
-        "difference": -3.3628
+        "feature": "V3_dominant_freq",
+        "original_value": 3.6133,
+        "counterfactual_value": 0.1983,
+        "difference": -3.415
       },
       {
-        "feature": "II_rr_min",
-        "original_value": 3.2215,
-        "counterfactual_value": -0.1395,
-        "difference": -3.3611
+        "feature": "aVF_zero_crossings",
+        "original_value": 4.7589,
+        "counterfactual_value": 1.4567,
+        "difference": -3.3022
       },
       {
-        "feature": "V3_skewness",
-        "original_value": 1.855,
-        "counterfactual_value": -1.4809,
-        "difference": -3.3359
+        "feature": "V5_zero_crossings",
+        "original_value": 2.8385,
+        "counterfactual_value": -0.1343,
+        "difference": -2.9728
       },
       {
-        "feature": "corr_V1_V2",
-        "original_value": -2.2758,
-        "counterfactual_value": 0.753,
-        "difference": 3.0288
+        "feature": "V1_mean",
+        "original_value": 0.8659,
+        "counterfactual_value": -1.9976,
+        "difference": -2.8635
       }
     ],
     "model_used": "gpt-4o-mini",
-    "generation_time": 4.256
+    "generation_time": 2.825
+  },
+  {
+    "id": "EVAL_018",
+    "sample_index": 1155,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 1.0,
+    "detection_confidence": 1.0,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant deviations in key measurements compared to normal reference patterns.",
+      "key_differences": [
+        "The peak height in Lead V1 is 5.68 units lower than normal.",
+        "The minimum RR interval in Lead II is 4.38 units lower than normal.",
+        "The minimum RR interval in Lead V3 is 3.85 units lower than normal."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in cardiac electrical activity.",
+      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
+    },
+    "counterfactual_metrics": {
+      "validity": false,
+      "proximity": 21.0765,
+      "sparsity": 104
+    },
+    "top_feature_changes": [
+      {
+        "feature": "V1_peak_height_mean",
+        "original_value": 5.4449,
+        "counterfactual_value": -0.2341,
+        "difference": -5.6789
+      },
+      {
+        "feature": "II_rr_min",
+        "original_value": 4.7511,
+        "counterfactual_value": 0.3711,
+        "difference": -4.3801
+      },
+      {
+        "feature": "V3_rr_min",
+        "original_value": 3.6729,
+        "counterfactual_value": -0.178,
+        "difference": -3.8509
+      },
+      {
+        "feature": "V4_rr_min",
+        "original_value": 3.271,
+        "counterfactual_value": -0.3009,
+        "difference": -3.5719
+      },
+      {
+        "feature": "V1_var",
+        "original_value": -0.1911,
+        "counterfactual_value": -3.7554,
+        "difference": -3.5643
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 2.425
+  },
+  {
+    "id": "EVAL_019",
+    "sample_index": 832,
+    "ground_truth": "anomaly",
+    "predicted": "anomaly",
+    "anomaly_score": 0.9995,
+    "detection_confidence": 0.9995,
+    "explanation": {
+      "flag_reason": "This ECG was flagged because it shows significant deviations from normal patterns in multiple leads.",
+      "key_differences": [
+        "Lead aVR shows a lower lf/hf ratio by 3.83 units compared to normal.",
+        "Lead I has a median value that is 3.52 units lower than the normal reference.",
+        "Lead III exhibits a higher mean value by 2.95 units than the normal reference."
+      ],
+      "interpretation_note": "These patterns may be associated with variations in heart function and electrical activity.",
+      "confidence_statement": "The high anomaly score and substantial distance from normal patterns suggest a strong likelihood of abnormality."
+    },
+    "counterfactual_metrics": {
+      "validity": false,
+      "proximity": 17.8837,
+      "sparsity": 88
+    },
+    "top_feature_changes": [
+      {
+        "feature": "aVR_lf_hf_ratio",
+        "original_value": 2.7731,
+        "counterfactual_value": -1.0546,
+        "difference": -3.8277
+      },
+      {
+        "feature": "I_median",
+        "original_value": 3.6174,
+        "counterfactual_value": 0.0942,
+        "difference": -3.5232
+      },
+      {
+        "feature": "corr_V1_V2",
+        "original_value": -2.659,
+        "counterfactual_value": 0.7537,
+        "difference": 3.4127
+      },
+      {
+        "feature": "III_vlf_power",
+        "original_value": 2.6789,
+        "counterfactual_value": -0.293,
+        "difference": -2.9719
+      },
+      {
+        "feature": "III_mean",
+        "original_value": -1.9695,
+        "counterfactual_value": 0.9767,
+        "difference": 2.9462
+      }
+    ],
+    "model_used": "gpt-4o-mini",
+    "generation_time": 2.932
   }
 ]
