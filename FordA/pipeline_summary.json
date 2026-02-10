@@ -1,5 +1,5 @@
 {
-  "dataset": "Starlight Curves",
+  "dataset": "FordA Curves",
   "n_train": 3601,
   "n_test": 1320,
   "n_novel_test": 639,
